@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Medication Helper 💊</h1>
+
+        <section class="card">
+            <h2>Age-Based Dosage Advice</h2>
+            <p>Enter your age to get a general dosage recommendation.</p>
+            <input type="number" id="ageInput" placeholder="Enter your age">
+            <button id="checkAgeBtn">Check Advice</button>
+            <p id="ageResult" class="result"></p>
+        </section>
+
+        <section class="card">
+            <h2>Next Dose Calculator</h2>
+            <p>Calculate when to take your next dose.</p>
+            <label for="lastDoseInput">Last Dose Time (24h format, e.g., 08:30):</label>
+            <input type="time" id="lastDoseInput">
+            <label for="frequencyInput">Frequency (in hours):</label>
+            <input type="number" id="frequencyInput" placeholder="e.g., 8">
+            <button id="calculateDoseBtn">Calculate</button>
+            <p id="doseResult" class="result"></p>
+        </section>
+        
+        <section class="card">
+            <h2>Common Medications List</h2>
+            <p>This list is generated dynamically with a loop.</p>
+            <ul id="medicationList">
+                </ul>
+        </section>
+
+        <section class="card">
+            <h2>Important Information</h2>
+            <button id="toggleSideEffectsBtn">Show Common Side Effects</button>
+            <div id="sideEffectsInfo" class="hidden">
+                <p>Common side effects may include drowsiness, dizziness, or upset stomach. Always read the patient information leaflet and consult your doctor.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
